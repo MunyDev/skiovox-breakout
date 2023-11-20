@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  background-color: #800000;
+}
+.container {
+  height: 100%;
+}
+
+div {
+  padding: 10px;
+  display: static;
+}
+legend {
+  user-select: none;
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+fieldset input, .textarea {
+  font-family: monospace;
+}
+fieldset input {
+  color: black;
+  width: 250px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 7.5px;
+  border: 1.5px solid black;
+}
+fieldset .textarea {
+  color: black;
+  background-color: #ffffff;
+  border: ridge 2px;
+  min-height: 5em;
+  overflow: auto;
+}
+fieldset input {
+  font-family: "Montserrat", sans-serif;
+}
+fieldset input,
+.textarea:focus {
+  outline: none;
+}
+
+.parent .child {
+  display: block;
+}
+
+.clean-transition {
+  display: block;
+  animation: fade-in 1.5s;
+}
+
+.parent:not(:hover) .child.did-fade-in {
+  display: block;
+  animation: fade-out 1.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+button {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:focus {
+  color: #171e29;
+}
+
+button:hover {
+  color: white;
+  background-color: rgb(100, 0, 0);
+}
+
+button:active {
+  border-color: #555555;
+  color: #555555;
+  fill: #555555;
+}

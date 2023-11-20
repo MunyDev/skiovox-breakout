@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="breakout" class="parent">
+        <h1>Extension Breakout</h1>
+        <div class="child clean-transition">
+          <fieldset>
+            <legend>Extension ID</legend>
+            <input
+              type="text"
+              maxlength="32"
+              id="extid"
+              placeholder="Place your extension ID here"
+            />
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Arbitrary JavaScript</legend>
+            <div class="textarea" contenteditable>alert(1)</div>
+          </fieldset>
+          <br />
 
-    </style>
-</head>
-<body>
-    <div id="breakout">
-        <h1>Extension breakout</h1>
-    <div>
-        <input type="text"  id="extid" placeholder="Place your extension ID here">
-        <textarea id="payload" placeholder="Enter exploit code here">alert(1);</textarea>
-        <button id="cancelinjection">Cancel injection</button>
-        <button id="startinjection">Start injection</button>
-        
+          <button id="cancelinjection">Cancel injection</button>
+          <button id="startinjection">Start injection</button>
+        </div>
+
+        <p>Status: <span class="status">Not started yet</span></p>
+        <hr />
+      </div>
     </div>
-
-
-    Status: <span id="status">Not started yet</span>
-    </div>
-    <div id="filewrite">
-        <h1>File write isn't coming in this release for now. Stay tuned for updates.</h1>
-    </div>
-    <script src="index.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

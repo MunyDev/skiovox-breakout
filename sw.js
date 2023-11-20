@@ -87,16 +87,8 @@ async function searchForBackgroundPage() {
     })
     return result;
 }
-function isManifestV3Extension({ url, type: requestType }) {
-    return new Promise((resolve, reject) => {
-        if (!url.startsWith("chrome-extension://") || requestType.indexOf("service")) return resolve(false); // New service workers can't be created on MV2 and services workers are created on mv3 by default.
-        resolve(true);
-    });
-};
-async function onNetEvent(_, _, event) {
-     // That is not how you make mv3 targetable just go with the mv2 flow you  need to wait for and identity the mv3 service worker target id which shouldn't be done on netEvent.
-    
 
+async function onNetEvent(_, _, event) {   
     if (!event.request.url.startsWith("chrome-extension://" + extPrefixContext)) {
         await chrome.debugger.sendCommand(target, "Fetch.continueRequest", {
             requestId: event.requestId
