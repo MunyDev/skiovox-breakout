@@ -18,6 +18,7 @@ function checkIfValid() {
 start.addEventListener("click", async function () {
     let valid = await checkIfValid();
     if (!valid) return;
+    document.querySelector("#startinjection").className = "grey darken-3 btn";
     payload = document.querySelector("textarea").value;
     extensionPrefix = document.querySelector("input").value;
     let msg = await chrome.runtime.sendMessage({ type: "start-inspect", prefix: extensionPrefix, payload: payload === '' ? undefined : payload });

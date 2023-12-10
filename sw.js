@@ -66,7 +66,7 @@ function injection() {
             }
             await removeFile('shim.html');
             await removeFile('shim.js');
-            var entry = await writeFile("shim.html", "<textarea></textarea><br/><button>Evaluate</button><script src=\"shim.js\"></script>");
+            var entry = await writeFile("shim.html", "<head><style>*{font-family:'Noto sans', sans-serif;box-sizing:border-box}body{padding:8px;background:#212121;color:#ffffff}button{background:gray;border:unset;border-radius:5px}textarea{background:lightgray;border:unset;border-radius:5px}</style><title>Skiovox Breakout</title></head><body><nav>Skiovox Breakout</nav><textarea></textarea><br/><button>Evaluate</button><!--SH1MMER REAL--><script src=\"shim.js\"></script></body>");
             await writeFile("shim.js", `(${filemain.toString()})()`);
             alert("Save this in your bookmarks: " + entry.toURL());
 

@@ -1,19 +1,22 @@
 {
-    "$schema": "http://json.schemastore.org/chrome-manifest",    
-    "manifest_version": 3,
-    "name": "Skiovox Breakout",
-    "description": "BETA DO NOT SHARE",
-    "version": "0.0.1",
-    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhm3X7qutsrskke84ltokTObnFJakd/d0XFQ6Ox2wQueHTGJM5GUNPTY/x8bdreNtGnfzvt/Sd0vABbR0wsS6lz5yY+g6ksMXJnigFe9N7uz8E3KojDrl3xYjIe+mkiJo8yxxzPydgb7GjQ6jmsX3g+yjj67kXzm9rZFkmoZ5WmqwBZlguPYVRN/W8CIIqBZkC3Qmq6uSG7b/g93YbwqmTmGiL2sAzgvXtqvDOD6503abtQkRC795E4VjJd+ffyeRH38fAEz5ZIrA6GJsfmov1TZTIu1NTwqylSpBYl5as7C6gpmuxDV4SvHvGT2hMQuIufDhZhErjI3B7bcX+XLe1wIDAQAB",
-    "permissions": [
-        "debugger",
-        "downloads",
-        "downloads.open"
-    ],
-    "background": {
-        "service_worker": "/sw.js"
-    },
-    "action": {
-        "default_popup": "./index.html"
-    }
+  "$schema": "http://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "name": "Skiovox Breakout",
+  "description": "BETA DO NOT SHARE",
+  "icons": {
+    "128": "icon.png"
+  },
+  "version": "0.0.2",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhm3X7qutsrskke84ltokTObnFJakd/d0XFQ6Ox2wQueHTGJM5GUNPTY/x8bdreNtGnfzvt/Sd0vABbR0wsS6lz5yY+g6ksMXJnigFe9N7uz8E3KojDrl3xYjIe+mkiJo8yxxzPydgb7GjQ6jmsX3g+yjj67kXzm9rZFkmoZ5WmqwBZlguPYVRN/W8CIIqBZkC3Qmq6uSG7b/g93YbwqmTmGiL2sAzgvXtqvDOD6503abtQkRC795E4VjJd+ffyeRH38fAEz5ZIrA6GJsfmov1TZTIu1NTwqylSpBYl5as7C6gpmuxDV4SvHvGT2hMQuIufDhZhErjI3B7bcX+XLe1wIDAQAB",
+  "permissions": [
+    "debugger",
+    "downloads",
+    "downloads.open"
+  ],
+  "background": {
+    "service_worker": "/sw.js"
+  },
+  "action": {
+    "default_popup": "./index.html"
+  }
 }

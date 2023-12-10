@@ -5,30 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
     </style>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body>
+<body class="grey darken-4">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <div id="breakout">
-        <h1>Extension breakout</h1>
-    <div>
-        <input type="text"  id="extid" placeholder="Place your extension ID here">
-        <textarea id="payload" placeholder="Enter exploit code here">alert(1);</textarea>
-        <button id="cancelinjection">Cancel injection</button>
-        <button id="startinjection">Start injection</button>
-        
-    </div>
+        <nav>
+            <div class="nav-wrapper grey darken-3">
+                <a style="text-align: center; font-size: inherit;"><center>Extension breakout</center></a>
+            </div>
+        </nav>
+        <div class="row" style="align-items: center; display: grid;margin-top:5px;">
+            <div class="row">
+                <div class="input-field col s12">
+                    <center>
+                        <i class="material-icons prefix" style="color:white;">extension</i>
+                        <input type="text" id="extid" style="color:white;" placeholder="Place your extension ID here">
+                        <label for="extid">Extension</label>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <center>
+                        <i class="material-icons prefix" style="color:white;">code</i>
+                        <textarea id="payload" class="materialize-textarea" placeholder="Enter exploit code here" style="color:white;">alert(1);</textarea>
+                        <label for="payload">Code</label>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <center>
+                        <button id="startinjection" class="grey darken-3 btn pulse">Start injection</button>
+                        <button id="cancelinjection" class="grey darken-3 btn" style="font-size: 10px; margin: 5px;">Cancel injection</button>
+                    </center>
+                </div>
+            </div>
 
 
-    Status: <span id="status">Not started yet</span>
+            <div class="row">
+                <center style="color:white;">
+                    Status: <span id="status" style="color:white;">Not started yet</span>
+                </center>
+                </div>
+            </div>
+        <div id="filewrite">
+            <nav>
+                <div class="nav-wrapper grey darken-3">
+                    <a style="text-align: center; font-size: inherit;"><center>Arbritary File Write</center></a>
+                </div>
+            </nav>
+            <div class="row" style="align-items: center; display: grid;margin-top:5px;">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="color:white;">file_download</i>
+                        <input type="text" id="downloadpath" style="color:white;" placeholder="Download path">
+                        <label for="downloadpath">Download path</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="color:white;">wallpaper</i>
+                        <textarea name="content" id="downloadedcontent" class="materialize-textarea" style="color:white;" cols="30" rows="10"></textarea>
+                        <label for="downloadedcontent">Content</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button id="startdownload" class="grey darken-3 btn">Start download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="filewrite">
-        <h1>Arbritary File Write</h1>
-        <input type="text" id="downloadpath" placeholder="Download path">
-        <textarea name="content" id="downloadedcontent" cols="30" rows="10"></textarea>
-        <button id="startdownload"></button>
-    </div>
-    <script src="index.js"></script>
+                            <script src="index.js"></script>
 
 </body>
 </html>
